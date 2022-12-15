@@ -932,21 +932,25 @@ public class DIGIBANK extends javax.swing.JFrame {
         );
 
         Deposit.setForeground(new java.awt.Color(255, 255, 255));
+        Deposit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         banknamed.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         banknamed.setForeground(new java.awt.Color(255, 255, 255));
         banknamed.setText("BankName");
+        Deposit.add(banknamed, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
         accnumberd.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         accnumberd.setForeground(new java.awt.Color(255, 255, 255));
         accnumberd.setText("Account Number:");
+        Deposit.add(accnumberd, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 37, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("DEPOSIT AMOUNT:");
+        Deposit.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
 
         CANCELd.setBackground(new java.awt.Color(102, 255, 0));
-        CANCELd.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        CANCELd.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         CANCELd.setForeground(new java.awt.Color(255, 255, 255));
         CANCELd.setText("CANCEL");
         CANCELd.addActionListener(new java.awt.event.ActionListener() {
@@ -954,9 +958,10 @@ public class DIGIBANK extends javax.swing.JFrame {
                 CANCELdActionPerformed(evt);
             }
         });
+        Deposit.add(CANCELd, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 249, -1, -1));
 
         CLEARd.setBackground(new java.awt.Color(255, 0, 0));
-        CLEARd.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        CLEARd.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         CLEARd.setForeground(new java.awt.Color(255, 255, 255));
         CLEARd.setText("CLEAR");
         CLEARd.addActionListener(new java.awt.event.ActionListener() {
@@ -964,6 +969,7 @@ public class DIGIBANK extends javax.swing.JFrame {
                 CLEARdActionPerformed(evt);
             }
         });
+        Deposit.add(CLEARd, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 249, -1, -1));
 
         Depositamount.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -973,56 +979,7 @@ public class DIGIBANK extends javax.swing.JFrame {
                 DepositamountKeyTyped(evt);
             }
         });
-
-        Deposit.setLayer(banknamed, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Deposit.setLayer(accnumberd, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Deposit.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Deposit.setLayer(CANCELd, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Deposit.setLayer(CLEARd, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Deposit.setLayer(Depositamount, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout DepositLayout = new javax.swing.GroupLayout(Deposit);
-        Deposit.setLayout(DepositLayout);
-        DepositLayout.setHorizontalGroup(
-            DepositLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DepositLayout.createSequentialGroup()
-                .addGroup(DepositLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DepositLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(DepositLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(banknamed)
-                            .addComponent(accnumberd)))
-                    .addGroup(DepositLayout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel7))
-                    .addGroup(DepositLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(CANCELd)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(CLEARd)
-                .addGap(43, 43, 43))
-            .addGroup(DepositLayout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(Depositamount, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        DepositLayout.setVerticalGroup(
-            DepositLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DepositLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(banknamed)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(accnumberd)
-                .addGap(56, 56, 56)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Depositamount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                .addGroup(DepositLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CANCELd)
-                    .addComponent(CLEARd))
-                .addGap(34, 34, 34))
-        );
+        Deposit.add(Depositamount, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 93, -1));
 
         Transfer.setForeground(new java.awt.Color(255, 255, 255));
 
