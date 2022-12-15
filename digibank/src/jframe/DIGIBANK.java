@@ -15,6 +15,7 @@ import java.sql.Statement;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
@@ -449,17 +450,27 @@ public class DIGIBANK extends javax.swing.JFrame {
         EJECTd = new javax.swing.JButton();
         deposit1 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         EnterPin = new javax.swing.JLayeredPane();
         jLabel2 = new javax.swing.JLabel();
         PIN = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
         Accnumber = new javax.swing.JLayeredPane();
         Accnumbetb = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         choosebank = new javax.swing.JLayeredPane();
         BPI = new javax.swing.JButton();
         PNB = new javax.swing.JButton();
         BDO = new javax.swing.JButton();
         LBP = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
         ViewBalance = new javax.swing.JLayeredPane();
         bankname = new javax.swing.JLabel();
         accnumber = new javax.swing.JLabel();
@@ -522,9 +533,10 @@ public class DIGIBANK extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         transaction.setForeground(new java.awt.Color(255, 255, 255));
+        transaction.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         transfer.setBackground(new java.awt.Color(102, 102, 102));
-        transfer.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        transfer.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         transfer.setForeground(new java.awt.Color(255, 255, 255));
         transfer.setText("Transfer");
         transfer.setBorderPainted(false);
@@ -533,9 +545,10 @@ public class DIGIBANK extends javax.swing.JFrame {
                 transferActionPerformed(evt);
             }
         });
+        transaction.add(transfer, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 159, 111, -1));
 
         viewbalance.setBackground(new java.awt.Color(102, 102, 102));
-        viewbalance.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        viewbalance.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         viewbalance.setForeground(new java.awt.Color(255, 255, 255));
         viewbalance.setText("View Balance");
         viewbalance.setBorderPainted(false);
@@ -544,9 +557,10 @@ public class DIGIBANK extends javax.swing.JFrame {
                 viewbalanceActionPerformed(evt);
             }
         });
+        transaction.add(viewbalance, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 159, -1, -1));
 
         withdraw.setBackground(new java.awt.Color(102, 102, 102));
-        withdraw.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        withdraw.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         withdraw.setForeground(new java.awt.Color(255, 255, 255));
         withdraw.setText("Withdraw");
         withdraw.setBorderPainted(false);
@@ -555,9 +569,10 @@ public class DIGIBANK extends javax.swing.JFrame {
                 withdrawActionPerformed(evt);
             }
         });
+        transaction.add(withdraw, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 197, 125, -1));
 
         EJECTd.setBackground(new java.awt.Color(255, 0, 0));
-        EJECTd.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        EJECTd.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         EJECTd.setForeground(new java.awt.Color(255, 255, 255));
         EJECTd.setText("Eject Card");
         EJECTd.setBorderPainted(false);
@@ -566,9 +581,10 @@ public class DIGIBANK extends javax.swing.JFrame {
                 EJECTdActionPerformed(evt);
             }
         });
+        transaction.add(EJECTd, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 235, 111, -1));
 
         deposit1.setBackground(new java.awt.Color(102, 102, 102));
-        deposit1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        deposit1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         deposit1.setForeground(new java.awt.Color(255, 255, 255));
         deposit1.setText("Deposit");
         deposit1.setBorderPainted(false);
@@ -577,63 +593,25 @@ public class DIGIBANK extends javax.swing.JFrame {
                 deposit1ActionPerformed(evt);
             }
         });
+        transaction.add(deposit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 197, 111, -1));
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 30)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));
         jLabel8.setText("Welcome to DIGIBANK");
+        transaction.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 79, -1, -1));
 
-        transaction.setLayer(transfer, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        transaction.setLayer(viewbalance, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        transaction.setLayer(withdraw, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        transaction.setLayer(EJECTd, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        transaction.setLayer(deposit1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        transaction.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout transactionLayout = new javax.swing.GroupLayout(transaction);
-        transaction.setLayout(transactionLayout);
-        transactionLayout.setHorizontalGroup(
-            transactionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transactionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(transactionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(transactionLayout.createSequentialGroup()
-                        .addGroup(transactionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(viewbalance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(withdraw, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-                        .addGroup(transactionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(transactionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(deposit1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(transfer, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(EJECTd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(transactionLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel8))))
-        );
-        transactionLayout.setVerticalGroup(
-            transactionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transactionLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                .addGroup(transactionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(viewbalance)
-                    .addComponent(transfer))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(transactionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(withdraw)
-                    .addComponent(deposit1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(EJECTd)
-                .addGap(53, 53, 53))
-        );
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/bank_50px.png"))); // NOI18N
+        jLabel21.setText("jLabel21");
+        transaction.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 43, -1));
 
         EnterPin.setForeground(new java.awt.Color(255, 255, 255));
         EnterPin.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        EnterPin.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Enter PIN:");
+        EnterPin.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 110, -1));
 
         PIN.setBackground(new java.awt.Color(102, 102, 102));
         PIN.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -651,34 +629,21 @@ public class DIGIBANK extends javax.swing.JFrame {
                 PINKeyTyped(evt);
             }
         });
+        EnterPin.add(PIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 140, -1));
 
-        EnterPin.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        EnterPin.setLayer(PIN, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        EnterPin.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
 
-        javax.swing.GroupLayout EnterPinLayout = new javax.swing.GroupLayout(EnterPin);
-        EnterPin.setLayout(EnterPinLayout);
-        EnterPinLayout.setHorizontalGroup(
-            EnterPinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EnterPinLayout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addGroup(EnterPinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(EnterPinLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel2))
-                    .addComponent(PIN, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(164, Short.MAX_VALUE))
-        );
-        EnterPinLayout.setVerticalGroup(
-            EnterPinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EnterPinLayout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(jLabel2)
-                .addGap(28, 28, 28)
-                .addComponent(PIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(139, Short.MAX_VALUE))
-        );
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/Pin Pad_50px.png"))); // NOI18N
+        EnterPin.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
 
         Accnumber.setForeground(new java.awt.Color(255, 255, 255));
+        Accnumber.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Accnumbetb.setBackground(new java.awt.Color(153, 153, 153));
         Accnumbetb.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -696,36 +661,21 @@ public class DIGIBANK extends javax.swing.JFrame {
                 AccnumbetbKeyTyped(evt);
             }
         });
+        Accnumber.add(Accnumbetb, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 178, 161, -1));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Enter Account Number:");
+        Accnumber.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, -1));
 
-        Accnumber.setLayer(Accnumbetb, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        Accnumber.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/account_50px.png"))); // NOI18N
+        jLabel13.setText("jLabel13");
+        Accnumber.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 43, -1));
 
-        javax.swing.GroupLayout AccnumberLayout = new javax.swing.GroupLayout(Accnumber);
-        Accnumber.setLayout(AccnumberLayout);
-        AccnumberLayout.setHorizontalGroup(
-            AccnumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AccnumberLayout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addGroup(AccnumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Accnumbetb, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(128, Short.MAX_VALUE))
-        );
-        AccnumberLayout.setVerticalGroup(
-            AccnumberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AccnumberLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(jLabel1)
-                .addGap(63, 63, 63)
-                .addComponent(Accnumbetb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
-        );
+        choosebank.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BPI.setBackground(new java.awt.Color(255, 0, 0));
+        BPI.setBackground(new java.awt.Color(102, 102, 102));
+        BPI.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BPI.setForeground(new java.awt.Color(255, 255, 255));
         BPI.setText("BPI");
         BPI.addActionListener(new java.awt.event.ActionListener() {
@@ -733,67 +683,73 @@ public class DIGIBANK extends javax.swing.JFrame {
                 BPIActionPerformed(evt);
             }
         });
+        choosebank.add(BPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 101, -1));
 
-        PNB.setBackground(new java.awt.Color(102, 102, 255));
-        PNB.setForeground(new java.awt.Color(255, 0, 0));
+        PNB.setBackground(new java.awt.Color(102, 102, 102));
+        PNB.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PNB.setForeground(new java.awt.Color(255, 255, 255));
         PNB.setText("PNB");
         PNB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PNBActionPerformed(evt);
             }
         });
+        choosebank.add(PNB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 101, -1));
 
-        BDO.setBackground(new java.awt.Color(0, 204, 0));
-        BDO.setForeground(new java.awt.Color(255, 255, 0));
+        BDO.setBackground(new java.awt.Color(102, 102, 102));
+        BDO.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BDO.setForeground(new java.awt.Color(255, 255, 255));
         BDO.setText("BDO");
         BDO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BDOActionPerformed(evt);
             }
         });
+        choosebank.add(BDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 97, -1));
 
-        LBP.setBackground(new java.awt.Color(255, 255, 0));
-        LBP.setForeground(new java.awt.Color(51, 102, 0));
+        LBP.setBackground(new java.awt.Color(102, 102, 102));
+        LBP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        LBP.setForeground(new java.awt.Color(255, 255, 255));
         LBP.setText("LBP");
         LBP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LBPActionPerformed(evt);
             }
         });
+        choosebank.add(LBP, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 97, -1));
 
-        choosebank.setLayer(BPI, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        choosebank.setLayer(PNB, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        choosebank.setLayer(BDO, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        choosebank.setLayer(LBP, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLabel15.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/pnb.png"))); // NOI18N
+        choosebank.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 130, 70));
 
-        javax.swing.GroupLayout choosebankLayout = new javax.swing.GroupLayout(choosebank);
-        choosebank.setLayout(choosebankLayout);
-        choosebankLayout.setHorizontalGroup(
-            choosebankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(choosebankLayout.createSequentialGroup()
-                .addGroup(choosebankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BPI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PNB, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
-                .addGroup(choosebankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BDO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(LBP, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-        choosebankLayout.setVerticalGroup(
-            choosebankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, choosebankLayout.createSequentialGroup()
-                .addContainerGap(152, Short.MAX_VALUE)
-                .addGroup(choosebankLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(choosebankLayout.createSequentialGroup()
-                        .addComponent(BDO)
-                        .addGap(52, 52, 52)
-                        .addComponent(LBP))
-                    .addGroup(choosebankLayout.createSequentialGroup()
-                        .addComponent(BPI)
-                        .addGap(52, 52, 52)
-                        .addComponent(PNB)))
-                .addGap(65, 65, 65))
-        );
+        jLabel16.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/bpi.png"))); // NOI18N
+        choosebank.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 120, 70));
+
+        jLabel14.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/bdo.png"))); // NOI18N
+        jLabel14.setText("jLabel14");
+        choosebank.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 110, 70));
+
+        jLabel17.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/ldb .png"))); // NOI18N
+        choosebank.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 110, 90));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/bank_50px.png"))); // NOI18N
+        choosebank.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Wide Latin", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel20.setText("DIGIBANK");
+        choosebank.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 160, 40));
 
         ViewBalance.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -1314,7 +1270,7 @@ public class DIGIBANK extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(Accnumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 55, Short.MAX_VALUE))
+                .addGap(0, 194, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -1369,7 +1325,7 @@ public class DIGIBANK extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(Accnumber)
+                .addComponent(Accnumber, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1474,9 +1430,15 @@ public class DIGIBANK extends javax.swing.JFrame {
     }//GEN-LAST:event_withdrawActionPerformed
 
     private void EJECTdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EJECTdActionPerformed
-        hidepane();
-        clear();
-        Accnumber.setVisible(true);
+        
+        JFrame jf = new JFrame();
+        jf.setAlwaysOnTop(true);
+        int a = JOptionPane.showConfirmDialog(jf, "Do you really want to Eject Card", "Select", JOptionPane.YES_NO_OPTION);
+        if (a == 0) {
+            hidepane();
+            clear();
+            Accnumber.setVisible(true);
+        }
     }//GEN-LAST:event_EJECTdActionPerformed
 
     private void PINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PINActionPerformed
@@ -1899,6 +1861,12 @@ public class DIGIBANK extends javax.swing.JFrame {
         receipt.setVisible(true);
     }//GEN-LAST:event_YesActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        hidepane();
+        choosebank.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1993,11 +1961,21 @@ public class DIGIBANK extends javax.swing.JFrame {
     private javax.swing.JLabel banknamew;
     private javax.swing.JLayeredPane choosebank;
     private javax.swing.JButton deposit1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
