@@ -130,7 +130,7 @@ public class DIGIBANK extends javax.swing.JFrame {
                     printreceipt.setText(printreceipt.getText() + "\n" + bankname.getText() + "\n");
                     printreceipt.setText(printreceipt.getText() + "\n" + accnumber.getText() + "\n");
                     printreceipt.setText(printreceipt.getText() + "Balance: ₱" + myFormat.format(balance) + "\n\n");
-                    printreceipt.setText(printreceipt.getText() + bankname.getText() + "-> " + chosenbank + "Bank-to-Bank Transaction: ₱" + myFormat.format(balance) + "- ₱15(Deduction fee)" + "\n\n");
+                    printreceipt.setText(printreceipt.getText() + bankname.getText() + "-> " + chosenbank + " Bank-to-Bank Transaction: ₱" + myFormat.format(balance) + "- ₱15(Deduction fee)" + "\n\n");
                     printreceipt.setText(printreceipt.getText() + "Balance: ₱" + myFormat.format(newbalance) + "\n\n");
 
                 } else {
@@ -631,13 +631,16 @@ public class DIGIBANK extends javax.swing.JFrame {
         });
         EnterPin.add(PIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 140, -1));
 
-        jButton1.setText("Back");
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("EJECT CARD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        EnterPin.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
+        EnterPin.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, -1, -1));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jframe/Pin Pad_50px.png"))); // NOI18N
         EnterPin.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
@@ -1227,7 +1230,7 @@ public class DIGIBANK extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(Accnumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 194, Short.MAX_VALUE))
+                .addGap(0, 214, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -1821,6 +1824,7 @@ public class DIGIBANK extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         hidepane();
+        clear();
         choosebank.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
